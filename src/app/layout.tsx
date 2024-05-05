@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import {AntdRegistry} from "@ant-design/nextjs-registry";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,9 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
         <TRPCReactProvider>
-          <AntdRegistry>
-            {children}
-          </AntdRegistry>
+          <AntdRegistry>{children}</AntdRegistry>
         </TRPCReactProvider>
       </body>
     </html>

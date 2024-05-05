@@ -5,6 +5,7 @@ msd test task
 ## Requirements
 
 The aim of this exercise is to create single web application that will consume data from remote API and will render pulled data in charts
+
 - Use TypeScript
 - Use next.js framework for building web application
 - Use ant.d library for UI and components on the page
@@ -18,11 +19,11 @@ The aim of this exercise is to create single web application that will consume d
 - The page will consist from page header and content area
 - Page header contains only title
 - Content area contains two cards with charts (any chart type is possible) with dummy avatar and dummy
-button as per picture
+  button as per picture
 - Above charts, there is a space (a panel) for Page title and dummy buttons (as per design, without any logic
-behind)
+  behind)
 - [OPTIONAL] Add a heart icon (not on design below!) to cards which allows visitors to select card as a favorite
-(use trpc for this feature)
+  (use trpc for this feature)
 
 ![img.png](img.png)
 
