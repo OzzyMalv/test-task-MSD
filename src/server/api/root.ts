@@ -1,8 +1,10 @@
-import { postRouter } from "~/server/api/routers/post";
+import { positiveCovidCasesRouter } from "~/server/api/routers/positiveCovidCases";
+import { positiveVirusCasesRouter } from "~/server/api/routers/positiveVirusCases";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
 
 export const appRouter = createTRPCRouter({
-  post: postRouter,
+  positiveCovidCases: positiveCovidCasesRouter,
+  positiveVirusCases: positiveVirusCasesRouter,
 });
 
 export type AppRouter = typeof appRouter;

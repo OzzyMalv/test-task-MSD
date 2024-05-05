@@ -7,12 +7,26 @@ generator client {
 
 datasource db {
     provider = "postgresql"
-    url      = env("DATABASE_URL")
+    url = env("POSTGRES_PRISMA_URL")
+    directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Post {
+model PositiveCovidCases {
+    id        Int      @id @default(autoincrement())
+    city      String
+    date      DateTime
+    amount    Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@index([city])
+}
+
+model PositiveVirusCases {
     id        Int      @id @default(autoincrement())
     name      String
+    date      DateTime
+    cases     Int
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
